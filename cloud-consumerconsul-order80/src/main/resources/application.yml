@@ -5,11 +5,12 @@ server:
 spring:
   application:
     name: cloud-consumer-order
-###consul服务注册中心
+  ###consul服务注册中心
   cloud:
     consul:
-      host: localhost
+      host: 101.200.52.252
       port: 8500
       discovery:
         #hostname: 127.0.0.1
         service-name: ${spring.application.name}
+        prefer-agent-address: true
